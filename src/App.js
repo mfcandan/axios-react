@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import PersonList from './Components/PersonList'
+
+import PersonList from './Components/PersonList';
+import PersonInput from './Components/PersonInput';
+
 
 function App() {
   return (
@@ -9,8 +12,9 @@ function App() {
         <p>
           Welcome to Axios data!
         </p>
-        <PersonList />
       </header>
+      <PersonInput />
+      <PersonList />
       
     </div>
   );

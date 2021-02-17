@@ -7,7 +7,9 @@ export default class PersonInput extends React.Component{
         name: '',
     };
 
-    
+    handleChange = e => {
+        this.setState({ name: e.target.value })
+    }
     
     handleSubmit = e => {
         e.preventDefault();
@@ -16,7 +18,8 @@ export default class PersonInput extends React.Component{
             name: this.state.name
         }
 
-        axios.post('https://jsonplaceholder.typicode.com/users', { user })
+        axios
+            .post('https://jsonplaceholder.typicode.com/users', { user })
             .then( res => {
                 console.log(res);
                 console.log(res.data);
@@ -25,11 +28,12 @@ export default class PersonInput extends React.Component{
 
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <label>
                     PersonName:
-                    <input type='text' name='name' />
+                    <input type='text' name='name' onChange={this.handleChange} />
                 </label>
+                <button type="submit"> Add</button>
             </form>
         )
     }

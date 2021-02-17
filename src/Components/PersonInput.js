@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Button } from 'reactstrap';
 
 export default class PersonInput extends React.Component{
 
@@ -33,7 +34,7 @@ export default class PersonInput extends React.Component{
                     PersonName:
                     <input type='text' name='name' onChange={this.handleChange} />
                 </label>
-                <button type="submit"> Add</button>
+                <Button type="submit" color="success">Add</Button>
             </form>
         )
     }

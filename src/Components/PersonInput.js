@@ -30,11 +30,12 @@ export default class PersonInput extends React.Component{
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>
-                    PersonName:
-                    <input type='text' name='name' onChange={this.handleChange} />
+                <label className="name-label">
+                    PersonName
+                    <br/>
+                    <input class type='text' name='name' onChange={this.handleChange} />
                 </label>
-                <Button type="submit" color="success">Add</Button>
+                <Button type="submit" color="success" className="btn-add">Add</Button>
             </form>
         )
     }

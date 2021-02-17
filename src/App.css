@@ -32,3 +32,13 @@
     transform: rotate(360deg);
   }
 }
+
+.form{
+  display: inline-block;
+  width: 100%;
+}
+
+.btn-add{
+  margin-left: 1em;
+  font-size: 0.5em;
+}

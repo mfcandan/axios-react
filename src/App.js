@@ -3,6 +3,7 @@ import './App.css';
 
 import PersonList from './Components/PersonList';
 import PersonInput from './Components/PersonInput';
+import Modal from './Components/Modal'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       </header>
       <PersonInput />
       <PersonList />
-      
+      <Modal buttonLabel="Launch Modal" />
     </div>
   );
 }
